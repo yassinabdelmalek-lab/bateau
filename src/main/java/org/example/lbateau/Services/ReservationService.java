@@ -39,9 +39,9 @@ public class ReservationService {
         Optional<Reservation> resExistante = reservationRepository.findById(id);
         if (resExistante.isPresent()) {
             Reservation reservation = resExistante.get();
-            reservation.setDateReservation(resDetails.getDateReservation());
-            reservation.setHeureDebut(resDetails.getHeureDebut());
-            reservation.setHeureFin(resDetails.getHeureFin());
+            reservation.setDateCreation(resDetails.getDateCreation());
+            reservation.setDateDebut(resDetails.getDateDebut());
+            reservation.setDateFin(resDetails.getDateFin());
             reservation.setNombreHeures(resDetails.getNombreHeures());
             reservation.setNombrePersonnes(resDetails.getNombrePersonnes());
             reservation.setMontantTotal(resDetails.getMontantTotal());
