@@ -26,8 +26,7 @@ public class LbateauApplication extends SpringBootServletInitializer {
     CommandLineRunner createAllCollections(MongoTemplate mongoTemplate, MongoMappingContext mappingContext) {
         return args -> {
             System.out.println("DEBUG: Spring se connecte à la base : " + mongoTemplate.getDb().getName());
-            // 1. Get every entity class that Spring knows about (all your @Document
-            // classes)
+
             mappingContext.getPersistentEntities().forEach(entity -> {
                 Class<?> entityType = entity.getType();
 
